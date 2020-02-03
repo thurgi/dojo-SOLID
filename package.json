@@ -2,6 +2,8 @@
   "name": "coding-dojo",
   "version": "0.0.0",
   "scripts": {
+    "g:c": "ng generate component",
+    "g:s": "ng generate service",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
@@ -11,8 +13,6 @@
   },
   "private": true,
   "dependencies": {
-
-    "@acetiam/api-directory": "*",
     "@angular/animations": "~7.0.0",
     "@angular/common": "~7.0.0",
     "@angular/compiler": "~7.0.0",
