@@ -7,27 +7,56 @@ export class ApiConfigMockService {
 
   private applicationVarMock: ApplicationVar[] = [
     {
-      id: 'string',
+      id: 'alpha',
       categories: [
         {
-          id: 'string',
-          label: 'string',
+          id: 'alpha',
+          label: 'alpha',
           sections: [
             {
-              label: 'string',
+              label: 'alpha',
               variables: [
                 {
-                  name: 'string',
-                  label: 'string',
-                  description: 'string',
+                  name: 'alpha',
+                  label: 'alpha',
+                  description: 'alpha',
                   type: 'STRING',
-                  format: 'string',
+                  format: 'alpha',
                   readOnly: true,
                   restricted: true,
                   restartNeeded: true,
                   scope: 'USER',
                   level: 'USER',
-                  value: 'string'
+                  value: 'alpha'
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: 'beta',
+      categories: [
+        {
+          id: 'beta',
+          label: 'beta',
+          sections: [
+            {
+              label: 'beta',
+              variables: [
+                {
+                  name: 'beta',
+                  label: 'beta',
+                  description: 'beta',
+                  type: 'STRING',
+                  format: 'beta',
+                  readOnly: true,
+                  restricted: true,
+                  restartNeeded: true,
+                  scope: 'USER',
+                  level: 'USER',
+                  value: 'beta'
                 }
               ]
             }
