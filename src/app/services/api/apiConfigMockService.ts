@@ -1,9 +1,10 @@
 import {Observable} from 'rxjs';
 import {ApplicationVar} from '../../model/applicationVar';
 import {Injectable} from '@angular/core';
+import {ApiConfigInterface} from './ApiConfigInterface';
 
 @Injectable()
-export class ApiConfigMockService {
+export class ApiConfigMockService implements  ApiConfigInterface {
 
   private applicationVarMock: ApplicationVar[] = [
     {

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {ApiConfigMockService} from './services/api/apiConfigMockService';
+import {ApplicationVar} from "./model/applicationVar";
 
 @Component({
   selector: 'app-root',
@@ -9,10 +10,12 @@ import {ApiConfigMockService} from './services/api/apiConfigMockService';
 export class AppComponent {
   title = 'codingDojo';
 
+  receivedFromService: ApplicationVar[];
+
   constructor(private apiConfigMockService: ApiConfigMockService) {
     this.apiConfigMockService.getApplications().subscribe({
       next: value => {
-        console.log('value', value);
+        this.receivedFromService = value;
       }
     });
   }
