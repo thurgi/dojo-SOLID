@@ -1,8 +1,28 @@
-<p>
-  list works!
-</p>
+<h1>Applications</h1>
 <div id="list">
   <ul>
-    <li *ngFor="let param of params">{{param.id}}</li>
+    <li *ngFor="let applicationVar of applicationVars">
+      <h2>{{applicationVar.id}}</h2>
+      <ul>
+        <li *ngFor="let category of getCategories(applicationVar)" >
+          <h3>{{category.label}}</h3>
+          <ul>
+            <li *ngFor="let section of getSections(category)" >
+              <h4>{{section.label}}</h4>
+              <ul>
+                <li *ngFor="let variable of getVariables(section)" >
+                  <h5>{{variable.name}}</h5>
+                  <pre>Label: {{variable.label}}</pre>
+                  <pre>Description: {{variable.description}}</pre>
+                  <pre>Level: {{variable.level}}</pre>
+                  <pre>Value: {{variable.value}}</pre>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+    </li>
   </ul>
 </div>

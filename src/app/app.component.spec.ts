@@ -1,9 +1,9 @@
-import {TestBed, async, ComponentFixture} from '@angular/core/testing';
+import { TestBed, async, ComponentFixture } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
-import {ListComponent} from "./list/list.component";
-import {ApiConfigMockService} from "./services/api/apiConfigMockService";
-import {ApplicationVar} from "./model/applicationVar";
+import { ListComponent } from './list/list.component';
+import { ApiConfigMockService } from './services/api/apiConfigMockService';
+import { ApplicationVar } from './model/applicationVar';
 
 describe('AppComponent', () => {
   let component: AppComponent;
@@ -42,18 +42,5 @@ describe('AppComponent', () => {
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('h1').textContent).toContain('Welcome to codingDojo!');
-  });
-
-  it('should display mocked params', () => {
-    const appVars = [
-      {
-        id: 'toto',
-        categories: [],
-      } as ApplicationVar
-    ];
-    component.receivedFromService = appVars;
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('#list ul>li:first-of-type').textContent).toContain('toto');
   });
 });
